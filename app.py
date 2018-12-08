@@ -9,6 +9,13 @@ def index():
     data = vamp_list.processer()
     return render_template('index.html',data=data)
 
+
+@app.route("/selection")
+def selection():
+    # build out selection of vamps here, list all possible
+    return "Please select vampires"
+
 app.run(debug=True)
+
             
     
