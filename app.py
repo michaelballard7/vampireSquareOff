@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     vamp_list = Scraper()
     data = vamp_list.fetcher()
-    title = vamp_list.processer()
-    return render_template('index.html',title=title)
+    data = vamp_list.processer()
+    return render_template('index.html',data=data)
 
 app.run(debug=True)
             

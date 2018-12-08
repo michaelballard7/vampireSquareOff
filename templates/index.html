@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Top Vampire</title>
 </head>
 <body>
-    <h1>{{title}}</h1>
+    <h1>{{data['title']}}</h1>
+    <h3>My Favorite Vampires</h3>
+    <ol>
+        <li>{{data['faves'][0]}}</li>
+        <li>{{data['faves'][1]}}</li>
+        <li>{{data['faves'][2]}}</li>
+    </ol>
 </body>
 </html>

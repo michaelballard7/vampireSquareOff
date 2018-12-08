@@ -24,16 +24,11 @@ class Scraper():
         table = soup.table
         table_row= table.findAll("tr")
         fav_vampires = []
-        print(table_row)
-        
-        # for row in table_row.findAll("td"):
-            # for item in row.findAll("a"):
-            #     print(item)
-                # if item.get("title") == "What We Do in the Shadows":
-                #     fav_vampires.append(item)
-
-
-        return (title,fav_vampires)
+        titles = ["Blood Lad","Monster High","The Mortal Instruments","Vampire in Brooklyn"]
+        for title in titles:
+            if table.find("a", {"title": title}):
+                fav_vampires.append(title)
+        return {"title":title,"faves":fav_vampires}
 
     def formatter():
         pass
@@ -41,6 +36,6 @@ class Scraper():
 
 vampire_list = Scraper()
 
-vampire_list.processer()
+print(vampire_list.processer())
 
 
